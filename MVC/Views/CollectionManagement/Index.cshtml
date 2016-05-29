@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MVC.ViewModels.CollectionManagementViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CardNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RarityAbbreviation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsInCollection)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RarityAbbreviation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsInCollection)
+        </td>
+    </tr>
+}
+
+</table>

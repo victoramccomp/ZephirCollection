@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B516984-C86A-492B-8376-493A2DA922CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoModeloDDD.Domain</RootNamespace>
+    <AssemblyName>ProjetoModeloDDD.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Card.cs" />
+    <Compile Include="Entities\Cliente.cs" />
+    <Compile Include="Entities\Collection.cs" />
+    <Compile Include="Entities\Collector.cs" />
+    <Compile Include="Entities\DTO\PokemonCardListDTO.cs" />
+    <Compile Include="Entities\EnergyCard.cs" />
+    <Compile Include="Entities\EvolutionStage.cs" />
+    <Compile Include="Entities\PokemonCard.cs" />
+    <Compile Include="Entities\PokemonType.cs" />
+    <Compile Include="Entities\Produto.cs" />
+    <Compile Include="Entities\Rarity.cs" />
+    <Compile Include="Entities\Series.cs" />
+    <Compile Include="Entities\CardType.cs" />
+    <Compile Include="Entities\TrainerCard.cs" />
+    <Compile Include="Entities\TrainerType.cs" />
+    <Compile Include="Interfaces\Repositories\ICardRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICardTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IClienteRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICollectionRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ICollectorRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEnergyCardRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEvolutionStageRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPokemonCardRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPokemonTypeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRarityRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\ISeriesRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITrainerCardRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITrainerTypeRepository.cs" />
+    <Compile Include="Interfaces\Services\ICardService.cs" />
+    <Compile Include="Interfaces\Services\ICardTypeService.cs" />
+    <Compile Include="Interfaces\Services\ICollectionService.cs" />
+    <Compile Include="Interfaces\Services\ICollectorService.cs" />
+    <Compile Include="Interfaces\Services\IEnergyCardService.cs" />
+    <Compile Include="Interfaces\Services\IEvolutionStageService.cs" />
+    <Compile Include="Interfaces\Services\IPokemonCardListTestService.cs" />
+    <Compile Include="Interfaces\Services\IClienteService.cs" />
+    <Compile Include="Interfaces\Services\IPokemonCardService.cs" />
+    <Compile Include="Interfaces\Services\IPokemonTypeService.cs" />
+    <Compile Include="Interfaces\Services\IProdutoService.cs" />
+    <Compile Include="Interfaces\Services\IRarityService.cs" />
+    <Compile Include="Interfaces\Services\ISeriesService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Interfaces\Services\ITrainerCardService.cs" />
+    <Compile Include="Interfaces\Services\ITrainerTypeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CardService.cs" />
+    <Compile Include="Services\CollectionService.cs" />
+    <Compile Include="Services\CollectorService.cs" />
+    <Compile Include="Services\PokemonCardListTestService.cs" />
+    <Compile Include="Services\ClienteService.cs" />
+    <Compile Include="Services\PokemonCardService.cs" />
+    <Compile Include="Services\ProdutoService.cs" />
+    <Compile Include="Services\RarityService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

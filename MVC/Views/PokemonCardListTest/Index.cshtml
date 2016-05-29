@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MVC.ViewModels.PokemonCardListTestViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CollectionDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionCards)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.CardDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.LabelFor(modelItem => item.CollectionDescription)
+            @Html.DisplayFor(modelItem => item.CollectionDescription)
+            <br />
+            @Html.LabelFor(modelItem => item.CardNumber)
+            @Html.DisplayFor(modelItem => item.CardNumber)
+            <br />
+            @Html.LabelFor(modelItem => item.CollectionCards)
+            @Html.DisplayFor(modelItem => item.CollectionCards)
+            <br />
+            @Html.LabelFor(modelItem => item.CardDescription)
+            @Html.DisplayFor(modelItem => item.CardDescription)
+        </td>
+        <td>
+            <img src="@Url.Content(item.ImagePath)" />
+        </td>
+    </tr>
+}
+
+</table>
